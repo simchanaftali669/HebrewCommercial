@@ -22,6 +22,8 @@ function hebrewclock()
 	
 	var curr_hour = curr_hour/(1000 * 3600);
 
+	if(sunset < 12)
+		sunset+=24;
 	
 	//day
 	if(curr_hour > sunrise && curr_hour < sunset)
