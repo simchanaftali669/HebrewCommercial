@@ -45,20 +45,21 @@ function doit() {
 
 
     if (time_today[1] == 0) {
-        //sunrise_yasterdate = time_yasterday[2];
+        sunrise_yasterday = time_yasterday[2];
         sunrise = time_today[2];
         sunrise_tommorow = time_tommorow[2];
-        sunset_yasterdate = time_yasterday[3];
+        sunset_yasterday = time_yasterday[3];
         sunset = time_today[3];
         sunset_tommorow = time_tommorow[3];
+		
+		hour[0] = sunrise_yasterday;
+		hour[1] = sunrise;
+		hour[2] = sunrise_tommorow;
+		hour[3] = sunset_yasterday;
+		hour[4] = sunset;
+		hour[5] = sunset_tommorow;
 
         shaa_zmanit = (sunset - sunrise) / 12;
-
-		hour[0] = sunset_yasterdate;
-		hour[1] = sunrise;
-		hour[2] = sunset;
-		hour[3] = sunrise_tommorow;
-
 
         //using current time in the computer to adjust the right secdule...
         //get the time right now
