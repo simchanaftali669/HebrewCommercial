@@ -212,52 +212,54 @@ function commercialFunction()
 //need to update each commercial for each language with 1. link address and 2. css id connected to the commercial logo 
 function commercialInitFunction(commercial)
 {
-    switch(commercial)
+    var element = document.getElementById("commercial");
+	var clonedElement = element.cloneNode(true);
+	element.parentNode.replaceChild(clonedElement, element);
+	switch(commercial)
 	{
 		case "Soteria":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Soteria");
-            document.getElementById("commercial").setAttribute("title","בית מאזן");//.addEventListener("click",openCommercialInNewTab.bind(this,"http://soteria.org.il/"));
+            document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://soteria.org.il/"));
             break;
         case "Breslev":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Breslev");
-            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://www.emuniyim.com/"));
+            document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://www.emuniyim.com/"));
             break;
         case "ShifonPlus":
 			document.getElementById("commercial").querySelector(".day").setAttribute("id","ShifonPlus");
-			//document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://shifonplus.com/"));
+			document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://shifonplus.com/"));
             break;     
         case "IDF":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","IDF");
-            document.getElementById("commercial").setAttribute("title","צבא הגנה לישראל");
-			//document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.idf.il/"));
+			document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.idf.il/"));
         break;  
         case "Opticana":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Opticana");
-            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.opticana.co.il/"));            
+            document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.opticana.co.il/"));            
         break;     
         case "NewDeli":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","NewDeli");
-            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://newdeli.com/"));
+            document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://newdeli.com/"));
         break;   
         case "Velvel":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Velvel");
-            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.velvel.co.il/"));
+            document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.velvel.co.il/"));
         break;   
         case "Mispara":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Mispara");
-            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.opticana.co.il/"));
+            document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.opticana.co.il/"));
         break; 
         case "JacobsCoffee":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","JacobsCoffee");
-            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.jacobscoffee.co.il/"));
+            document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.jacobscoffee.co.il/"));
         break; 
         case "CoffeeBilig":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","CoffeeBilig");
-            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://naftali126.wixsite.com/chaimtovim"));
+            document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://naftali126.wixsite.com/chaimtovim"));
         break; 
         case "NesCafe":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","NesCafe");
-            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+            document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 
 	} 
 }
