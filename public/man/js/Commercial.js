@@ -3,7 +3,9 @@
 //s is "shevetLocation", d is "day of week" between 1-7, h is "hour" between 00 and 23, p meaning is "priority" counter set from min 0001 to max 1080 
 var cInRegionAtTime = new Map();
 const commercials = 
-{"Soteria":"s_xx#d_xx__h_xx__p_1+","IDF":"s_xx#d_xx__h_xx__p_1+"};
+{"Soteria":"s_xx#d_xx__h_xx__p_1+",
+ "IDF":"s_xx#d_xx__h_xx__p_1+",
+ "HebrewCommercial": "s_xx#d_xx__h_xx__p_1+"};
 
 //d_xx ==> xx means 01-06
 //d_0x ==> 0x means 01-05
@@ -258,6 +260,10 @@ function commercialInitFunction(commercial)
             document.getElementById("commercial").querySelector(".day").setAttribute("id","NesCafe");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 
+        case "HebrewCommercial":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","HebrewCommercial");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
 	} 
 }
 
