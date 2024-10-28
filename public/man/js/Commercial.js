@@ -6,7 +6,7 @@ const commercials =
 {"Soteria":"s_xx#d_xx__h_xx__p_1+",
  "IDF":"s_xx#d_xx__h_xx__p_1+",
  "HebrewCommercial": "s_xx#d_xx__h_xx__p_1+",
- "DJ_Gilad": "s_xx#d_02__h_xx__p_1+"};
+ "DJ_Gilad": "s_xx#d_xx__h_xx__p_1+"};
 
 //d_xx ==> xx means 01-06
 //d_0x ==> 0x means 01-05
