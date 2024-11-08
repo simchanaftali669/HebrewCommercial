@@ -3,10 +3,14 @@
 //s is "shevetLocation", d is "day of week" between 1-7, h is "hour" between 00 and 23, p meaning is "priority" counter set from min 0001 to max 1080 
 var cInRegionAtTime = new Map();
 const commercials = 
-{"Soteria":"s_xx#d_xx__h_xx__p_1+",
- "IDF":"s_xx#d_xx__h_xx__p_1+",
- "HebrewCommercial": "s_xx#d_xx__h_xx__p_1+",
- "DJ_Gilad": "s_xx#d_xx__h_xx__p_1+"};
+{
+    Soteria: 's_xx#d_xx__h_xx__p_0001+',
+    Breslev: 's_xx#d_xx__h_xx__p_0001+',
+    NesCafe: 's_xx#d_xx__h_12__p_0360+s_xx#d_xx__h_13__p_0360+s_xx#d_xx__h_14__p_0360+s_xx#d_xx__h_15__p_0360+s_xx#d_xx__h_16__p_0360+',
+    JacobsCoffee: 's_xx#d_xx__h_12__p_0360+s_xx#d_xx__h_13__p_0360+s_xx#d_xx__h_14__p_0360+s_xx#d_xx__h_15__p_0360+s_xx#d_xx__h_16__p_0360+',
+	LechemMoshe: 's_xx#d_xx__h_17__p_0360+s_xx#d_xx__h_23__p_0360+s_xx#d_xx__h_00__p_0360+s_xx#d_xx__h_01__p_0360+s_xx#d_xx__h_02__p_0360+s_xx#d_xx__h_03__p_0360+s_xx#d_xx__h_04__p_0360+s_xx#d_xx__h_05__p_0360+s_xx#d_xx__h_06__p_0360+s_xx#d_xx__h_07__p_0360+s_xx#d_xx__h_08__p_0360+s_xx#d_xx__h_09__p_0360',    
+	NewDeli: 's_xx#d_xx__h_23__p_0360+s_xx#d_xx__h_00__p_0360+s_xx#d_xx__h_01__p_0360+s_xx#d_xx__h_02__p_0360+s_xx#d_xx__h_03__p_0360+s_xx#d_xx__h_04__p_0360+s_xx#d_xx__h_05__p_0360+s_xx#d_xx__h_06__p_0360+s_xx#d_xx__h_07__p_0360+s_xx#d_xx__h_08__p_0360+s_xx#d_xx__h_09__p_0360',
+};
 
 //d_xx ==> xx means 01-06
 //d_0x ==> 0x means 01-05
