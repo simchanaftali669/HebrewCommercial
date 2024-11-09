@@ -229,6 +229,10 @@ function commercialInitFunction(commercial)
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Breslev");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://www.emuniyim.com/"));
             break;
+        case "LechemMoshe":
+			document.getElementById("commercial").querySelector(".day").setAttribute("id","LechemMoshe");
+			//document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://lecemoshe.click-eat.co.il/"));
+            break;     
         case "ShifonPlus":
 			document.getElementById("commercial").querySelector(".day").setAttribute("id","ShifonPlus");
 			//document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://shifonplus.com/"));

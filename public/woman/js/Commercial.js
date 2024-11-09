@@ -232,7 +232,11 @@ function commercialInitFunction(commercial)
         case "ShifonPlus":
                 document.getElementById("commercial").querySelector(".day").setAttribute("id","ShifonPlus");
                 document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://shifonplus.com/"));
-            break;     
+            break;  
+        case "LechemMoshe":
+			document.getElementById("commercial").querySelector(".day").setAttribute("id","LechemMoshe");
+			//document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://lecemoshe.click-eat.co.il/"));
+            break;     			
         case "IDF":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","IDF");
             document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.idf.il/"));

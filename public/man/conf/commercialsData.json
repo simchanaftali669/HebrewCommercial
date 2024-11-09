@@ -1,1 +1,8 @@
-{"Soteria":"s_12#d_xx__h_xx__p_36+","IDF":"s_12#d_XX__h_xx__p_36+"}
+{
+	"Soteria": "s_xx#d_xx__h_xx__p_0001+",
+    "Breslev": "s_xx#d_xx__h_xx__p_0001+",
+    "NesCafe": "s_xx#d_xx__h_12__p_0360+s_xx#d_xx__h_13__p_0360+s_xx#d_xx__h_14__p_0360+s_xx#d_xx__h_15__p_0360+s_xx#d_xx__h_16__p_0360+",
+    "JacobsCoffee": "s_xx#d_xx__h_12__p_0360+s_xx#d_xx__h_13__p_0360+s_xx#d_xx__h_14__p_0360+s_xx#d_xx__h_15__p_0360+s_xx#d_xx__h_16__p_0360+",
+	"LechemMoshe": "s_xx#d_xx__h_17__p_0360+s_xx#d_xx__h_23__p_0360+s_xx#d_xx__h_00__p_0360+s_xx#d_xx__h_01__p_0360+s_xx#d_xx__h_02__p_0360+s_xx#d_xx__h_03__p_0360+s_xx#d_xx__h_04__p_0360+s_xx#d_xx__h_05__p_0360+s_xx#d_xx__h_06__p_0360+s_xx#d_xx__h_07__p_0360+s_xx#d_xx__h_08__p_0360+s_xx#d_xx__h_09__p_0360",
+	"NewDeli": "s_xx#d_xx__h_23__p_0360+s_xx#d_xx__h_00__p_0360+s_xx#d_xx__h_01__p_0360+s_xx#d_xx__h_02__p_0360+s_xx#d_xx__h_03__p_0360+s_xx#d_xx__h_04__p_0360+s_xx#d_xx__h_05__p_0360+s_xx#d_xx__h_06__p_0360+s_xx#d_xx__h_07__p_0360+s_xx#d_xx__h_08__p_0360+s_xx#d_xx__h_09__p_0360"
+}
