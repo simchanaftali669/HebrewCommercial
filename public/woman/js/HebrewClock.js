@@ -271,19 +271,20 @@ function markTime(moonSleep)
 	if(moonSleep)
 	{
 		document.getElementById("Hour").style.color = "#878787";
-		document.getElementById("HebrewText2").style.color = "#878787";
+		document.getElementById("Text2").style.color = "#878787";
 		document.getElementById("Minute").style.color = "#878787";
-		document.getElementById("HebrewText4").style.color = "#878787";
+		document.getElementById("Text4").style.color = "#878787";
 		document.getElementById("Second").style.color = "#878787";
 	}
 	else
 	{
 		document.getElementById("Hour").style.color = "#CA2C92";
-		document.getElementById("HebrewText2").style.color = "#CA2C92";
+		document.getElementById("Text2").style.color = "#CA2C92";
 		document.getElementById("Minute").style.color = "#CA2C92";
-		document.getElementById("HebrewText4").style.color = "#CA2C92";
+		document.getElementById("Text4").style.color = "#CA2C92";
 		document.getElementById("Second").style.color = "#CA2C92";
 	}
 	
 	
 }
+
