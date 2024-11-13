@@ -6,9 +6,23 @@ const commercials =
 {
     Soteria: 's_xx#d_xx__h_xx__p_0001+',
     Breslev: 's_xx#d_xx__h_xx__p_0001+',
-    NesCafe: 's_xx#d_xx__h_12__p_0360+s_xx#d_xx__h_13__p_0360+s_xx#d_xx__h_14__p_0360+s_xx#d_xx__h_15__p_0360+s_xx#d_xx__h_16__p_0360+',
-    JacobsCoffee: 's_xx#d_xx__h_12__p_0360+s_xx#d_xx__h_13__p_0360+s_xx#d_xx__h_14__p_0360+s_xx#d_xx__h_15__p_0360+s_xx#d_xx__h_16__p_0360+',
-	ShifonPlus: 's_xx#d_xx__h_17__p_0360+s_xx#d_xx__h_23__p_0360+s_xx#d_xx__h_00__p_0360+s_xx#d_xx__h_01__p_0360+s_xx#d_xx__h_02__p_0360+s_xx#d_xx__h_03__p_0360+s_xx#d_xx__h_04__p_0360+s_xx#d_xx__h_05__p_0360+s_xx#d_xx__h_06__p_0360+s_xx#d_xx__h_07__p_0360+s_xx#d_xx__h_08__p_0360+s_xx#d_xx__h_09__p_0360',    
+ 
+    Drink_01: 's_xx#d_02__h_14__p_0360+s_xx#d_04__h_15__p_0360+s_xx#d_05__h_12__p_0360+s_xx#d_06__h_16__p_0360+s_xx#d_07__h_13__p_0360+',
+    Drink_02: 's_xx#d_02__h_15__p_0360+s_xx#d_03__h_12__p_0360+s_xx#d_04__h_16__p_0360+s_xx#d_05__h_13__p_0360+s_xx#d_07__h_14__p_0360+',
+    Drink_03: 's_xx#d_01__h_12__p_0360+s_xx#d_02__h_16__p_0360+s_xx#d_03__h_13__p_0360+s_xx#d_05__h_14__p_0360+s_xx#d_07__h_15__p_0360+',
+    Drink_04: 's_xx#d_01__h_16__p_0360+s_xx#d_02__h_13__p_0360+s_xx#d_04__h_14__p_0360+s_xx#d_06__h_15__p_0360+',
+	Drink_05: 's_xx#d_01__h_13__p_0360+s_xx#d_03__h_14__p_0360+s_xx#d_05__h_15__p_0360+s_xx#d_06__h_12__p_0360+s_xx#d_07__h_16__p_0360+',
+	Drink_06: 's_xx#d_01__h_14__p_0360+s_xx#d_03__h_15__p_0360+s_xx#d_04__h_12__p_0360+s_xx#d_05__h_16__p_0360+s_xx#d_06__h_13__p_0360+',
+	Drink_07: 's_xx#d_01__h_15__p_0360+s_xx#d_02__h_12__p_0360+s_xx#d_03__h_16__p_0360+s_xx#d_04__h_13__p_0360+s_xx#d_06__h_14__p_0360+',
+	Eat_01: 's_xx#d_01__h_17__p_0360+',
+	Eat_02: 's_xx#d_06__h_17__p_0360+',
+	Eat_03: 's_xx#d_04__h_17__p_0360+',
+	Eat_04: 's_xx#d_03__h_17__p_0360+',
+	Eat_05: 's_xx#d_02__h_17__p_0360+',
+	Eat_06: 's_xx#d_07__h_17__p_0360+',
+	Eat_07: 's_xx#d_05__h_17__p_0360+',
+
+	Eat_01: 's_xx#d_xx__h_17__p_0360+s_xx#d_xx__h_23__p_0360+s_xx#d_xx__h_00__p_0360+s_xx#d_xx__h_01__p_0360+s_xx#d_xx__h_02__p_0360+s_xx#d_xx__h_03__p_0360+s_xx#d_xx__h_04__p_0360+s_xx#d_xx__h_05__p_0360+s_xx#d_xx__h_06__p_0360+s_xx#d_xx__h_07__p_0360+s_xx#d_xx__h_08__p_0360+s_xx#d_xx__h_09__p_0360',    
 	NewDeli: 's_xx#d_xx__h_23__p_0360+s_xx#d_xx__h_00__p_0360+s_xx#d_xx__h_01__p_0360+s_xx#d_xx__h_02__p_0360+s_xx#d_xx__h_03__p_0360+s_xx#d_xx__h_04__p_0360+s_xx#d_xx__h_05__p_0360+s_xx#d_xx__h_06__p_0360+s_xx#d_xx__h_07__p_0360+s_xx#d_xx__h_08__p_0360+s_xx#d_xx__h_09__p_0360',
 };
 
@@ -275,6 +289,62 @@ function commercialInitFunction(commercial)
         break;
 		case "DJ_Gilad":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","DJ_Gilad");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 
+		case "Eat_01":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_01");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
+		case "Drink_01":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_01");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
+		case "Eat_02":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_02");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
+		case "Drink_02":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_02");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
+		case "Eat_03":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_03");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
+		case "Drink_03":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_03");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 
+		case "Eat_04":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_04");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
+		case "Drink_04":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_04");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 
+		case "Eat_05":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_05");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
+		case "Drink_05":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_05");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 
+		case "Eat_06":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_06");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
+		case "Drink_06":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_06");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 
+		case "Eat_07":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_07");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 		
+		case "Drink_07":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_07");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 		
 	} 
