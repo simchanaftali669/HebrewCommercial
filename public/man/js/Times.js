@@ -136,32 +136,8 @@ function doit() {
         }
         //------------------------------
 */
-/*
-		document.getElementById("dawn").value = timeadj(s2 - (72/60), ampm);
-		document.getElementById("misheyakir").value = timeadj(s2 - (50/60), ampm);
-		document.getElementById("sunrise").value = timeadj(s2, ampm);
-        document.getElementById("shema").value = timeadj(s2 + shaa_zmanit_day * 3, ampm);
-        document.getElementById("tefila").value = timeadj(s2 + shaa_zmanit_day * 4, ampm);
-        document.getElementById("chatzot_yom").value = timeadj(s2 + shaa_zmanit_day*6 , ampm);
-        document.getElementById("mincha_gedola").value = timeadj(s2 + shaa_zmanit_day*6.5 , ampm);
-        document.getElementById("mincha_ketana").value = timeadj(s2 + shaa_zmanit_day*9.5 , ampm);
-		document.getElementById("plag_mincha").value = timeadj(s2 + shaa_zmanit_day*10.75 , ampm);
-		document.getElementById("sunset").value = timeadj(s3, ampm);
-		document.getElementById("tziet").value = timeadj(s3 + (18/60), ampm);
-		document.getElementById("tziet_tam").value = timeadj(s3 + (72/60), ampm);
-		document.getElementById("chatzot_layla").value = timeadj(s3 + shaa_zmanit_night*6, ampm);		
-
-
+	
 		var time;
-		
-		//עלות השחר
-		if( curr_hour > sunset_hour )
-			time = suntime(tomorrow.getDate(), tomorrow.getMonth() +1, tomorrow.getYear(), 106, 6, lngd, lngm, ewi, latd, latm, nsi, adj);
-		else
-			time = suntime(today.getDate(), today.getMonth() +1, today.getYear(), 106, 6, lngd, lngm, ewi, latd, latm, nsi, adj);
-        
-        if (time[1] == 0)
-			document.getElementById("dawn").value = timeadj(time[2], ampm);
 
 		//משיכיר
 		if( curr_hour > sunset_hour )
@@ -170,7 +146,7 @@ function doit() {
 			time = suntime(today.getDate(), today.getMonth() +1, today.getYear(), 101, 0, lngd, lngm, ewi, latd, latm, nsi, adj);
 		
 		if (time[1] == 0)
-			document.getElementById("misheyakir").value = timeadj(time[2], ampm);
+			misheyakir =  time[2];
 
 		//צאת הכוכבים
 		if( curr_hour > sunset_hour )
@@ -179,8 +155,8 @@ function doit() {
 			time = suntime(today.getDate(), today.getMonth() +1, today.getYear(), 96, 0, lngd, lngm, ewi, latd, latm, nsi, adj);
 		
 		if (time[1] == 0)
-            document.getElementById("tziet").value = timeadj(time[3], ampm);
-  */      
+            tziet =  time[3];
+      
     }
 
 

@@ -20,9 +20,9 @@ function hebrewclock()
     var s = date.getSeconds();
 	var milisec = date.getMilliseconds();
 
-	var curr_hour = milisec + (s*1000) + (m*60*1000) + ((h)*60*60*1000);
+	curr_hour = milisec + (s*1000) + (m*60*1000) + ((h)*60*60*1000);
 	
-	var curr_hour = curr_hour/(1000 * 3600);
+	curr_hour = curr_hour/(1000 * 3600);
 
 	
 	if(sunset > sunrise && curr_hour < sunset)
@@ -138,6 +138,7 @@ function hebrewclock()
 	}
 
 	display_time();
+	markTime();
 	
 	var url = document.location.href;
 	if(url.includes("jewish") || url.includes("cristian") || url.includes("islam"))
@@ -265,4 +266,26 @@ function offset()
        lbHourClock = lbHour + 2;
     else // 22 ==> 0, 23==> 1, 24==>2
        lbHourClock = lbHour + 2 - 24;		
+}
+
+function markTime()
+{	
+	if(curr_hour > tzeit  || 
+	   curr_hour < misheyakir)
+	{
+		document.getElementById("Hour").style.color = "#878787";
+		document.getElementById("Text2").style.color = "#878787";
+		document.getElementById("Minute").style.color = "#878787";
+		document.getElementById("Text4").style.color = "#878787";
+		document.getElementById("Second").style.color = "#878787";
+	}
+	else if(curr_hour < sunset && 
+			curr_hour > misheyakir/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+	{
+		document.getElementById("Hour").style.color = "#5DBCD2";
+		document.getElementById("Text2").style.color = "#5DBCD2";
+		document.getElementById("Minute").style.color = "#5DBCD2";
+		document.getElementById("Text4").style.color = "#5DBCD2";
+		document.getElementById("Second").style.color = "#5DBCD2";	
+	}
 }
