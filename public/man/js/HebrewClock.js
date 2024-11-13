@@ -8,7 +8,7 @@ function hebrewclock()
 	var sunrise = zmanit_hour[1];
 	var sunrise_tommorow = zmanit_hour[2];
 	var sunset_yasterday = zmanit_hour[3];
-	var sunset = zmanit_hour[4];
+	sunset = zmanit_hour[4];
 	var sunset_tommorow = zmanit_hour[5];
 	
 	var shaa_zmanit_night, shaa_zmanit_day;
@@ -270,6 +270,10 @@ function offset()
 
 function markTime()
 {	
+	console.log("curr_hour: " + curr_hour);
+	console.log("sunset: " + sunset);
+	console.log("misheyakir: " + misheyakir);
+	
 	if(curr_hour > tzeit  || 
 	   curr_hour < misheyakir)
 	{

@@ -18,7 +18,7 @@ function doit() {
     var adj = -(12 - tz);
     adj += dst;
 
-    var sunrise = 0, sunset, sunrise_tommorow, sunset_yasterdate;
+    var sunrise = 0, sunrise_tommorow, sunset_yasterdate;
     var shaa_zmanit = 0;
     var hour = []; //29
 
@@ -122,6 +122,8 @@ function doit() {
             s2 = sunrise;
 			s3 = sunset
         }
+		
+		sunset = s1;
 
 /*
         for (i = 0,s4=s1; i <= 11; i++, s4 += shaa_zmanit_night) 
@@ -136,6 +138,8 @@ function doit() {
         }
         //------------------------------
 */
+	
+		
 	
 		var time;
 
