@@ -50,7 +50,10 @@
     <script type="text/javascript" src="js/Gender.js"></script>
     <script type="text/javascript" src="js/Religion.js"></script>
     <script type="text/javascript" src="js/Commercial.js"></script>
-    <script type="text/javascript" src="js/Mazal.js"></script>
+	<script type="text/javascript" src="js/man/Mazal.js"></script>
+	<script type="text/javascript" src="js/man/Times.js"></script>
+	<script type="text/javascript" src="js/HebrewDayOffset.js"></script>
+	<script type="text/javascript" src="js/Mazal.js"></script>
     <script type="text/javascript" src="js/suncalc.js"></script>
     <script type="text/javascript" src="js/Times.js"></script>
     <script type="text/javascript" src="js/Shevet.js"></script>
@@ -80,6 +83,12 @@
     var sunsetH;
     var sunsetM;
     var sunsetS;
+	
+	var sunsetH_man;
+	var sunsetM_man;
+	var sunsetS_man;
+	var sunsetMili_man;
+	
 
     var tz = (new Date().getTimezoneOffset() / -60); //current time zone
 
@@ -94,6 +103,7 @@
     var oTimer;                 //event for the running clock
 
     var hebrewday;
+	var hebrewday_man;
     var lbHour = 23;           //hour of the clock called also sha'a
     var lbHourClock;            //hour for displaying
     var lbMinute = 1075;       //minute of the clock called also chelek

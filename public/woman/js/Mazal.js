@@ -30,6 +30,7 @@ function setmazal() {
         day = 1;
 
     hebrewday = day;
+	hebrewday += hebrewDayOffset();
 
     var day_mida = ["חסד", "גבורה", "תפארת", "נצח", "הוד", "יסוד", "מלכות"];
     var x = 0;
