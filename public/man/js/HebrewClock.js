@@ -270,9 +270,9 @@ function offset()
 
 function markTime()
 {	
-	console.log("curr_hour: " + curr_hour);
-	console.log("sunset: " + sunset);
-	console.log("misheyakir: " + misheyakir);
+	//console.log("curr_hour: " + curr_hour);
+	//console.log("sunset: " + sunset);
+	//console.log("misheyakir: " + misheyakir);
 	
 	if(curr_hour > tzeit  || 
 	   curr_hour < misheyakir)
