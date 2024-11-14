@@ -8,23 +8,37 @@ const commercials =
     Breslev: 's_xx#d_xx__h_xx__p_0001+',
  
     Drink_01: 's_xx#d_02__h_14__p_0360+s_xx#d_04__h_15__p_0360+s_xx#d_05__h_12__p_0360+s_xx#d_06__h_16__p_0360+s_xx#d_07__h_13__p_0360+',
-    Drink_02: 's_xx#d_02__h_15__p_0360+s_xx#d_03__h_12__p_0360+s_xx#d_04__h_16__p_0360+s_xx#d_05__h_13__p_0360+s_xx#d_07__h_14__p_0360+',
-    Drink_03: 's_xx#d_01__h_12__p_0360+s_xx#d_02__h_16__p_0360+s_xx#d_03__h_13__p_0360+s_xx#d_05__h_14__p_0360+s_xx#d_07__h_15__p_0360+',
+	Drink_02: 's_xx#d_02__h_15__p_0360+s_xx#d_03__h_12__p_0360+s_xx#d_04__h_16__p_0360+s_xx#d_05__h_13__p_0360+s_xx#d_07__h_14__p_0360+',    
+	Drink_03: 's_xx#d_01__h_12__p_0360+s_xx#d_02__h_16__p_0360+s_xx#d_03__h_13__p_0360+s_xx#d_05__h_14__p_0360+s_xx#d_07__h_15__p_0360+',
     Drink_04: 's_xx#d_01__h_16__p_0360+s_xx#d_02__h_13__p_0360+s_xx#d_04__h_14__p_0360+s_xx#d_06__h_15__p_0360+',
 	Drink_05: 's_xx#d_01__h_13__p_0360+s_xx#d_03__h_14__p_0360+s_xx#d_05__h_15__p_0360+s_xx#d_06__h_12__p_0360+s_xx#d_07__h_16__p_0360+',
 	Drink_06: 's_xx#d_01__h_14__p_0360+s_xx#d_03__h_15__p_0360+s_xx#d_04__h_12__p_0360+s_xx#d_05__h_16__p_0360+s_xx#d_06__h_13__p_0360+',
 	Drink_07: 's_xx#d_01__h_15__p_0360+s_xx#d_02__h_12__p_0360+s_xx#d_03__h_16__p_0360+s_xx#d_04__h_13__p_0360+s_xx#d_06__h_14__p_0360+',
 	Eat_01: 's_xx#d_01__h_17__p_0360+',
-	Eat_02: 's_xx#d_06__h_17__p_0360+',
+	Eat_02: 's_xx#d_06__h_17__p_0360+',	
 	Eat_03: 's_xx#d_04__h_17__p_0360+',
 	Eat_04: 's_xx#d_03__h_17__p_0360+',
 	Eat_05: 's_xx#d_02__h_17__p_0360+',
 	Eat_06: 's_xx#d_07__h_17__p_0360+',
 	Eat_07: 's_xx#d_05__h_17__p_0360+',
 
-	Eat_01: 's_xx#d_xx__h_17__p_0360+s_xx#d_xx__h_23__p_0360+s_xx#d_xx__h_00__p_0360+s_xx#d_xx__h_01__p_0360+s_xx#d_xx__h_02__p_0360+s_xx#d_xx__h_03__p_0360+s_xx#d_xx__h_04__p_0360+s_xx#d_xx__h_05__p_0360+s_xx#d_xx__h_06__p_0360+s_xx#d_xx__h_07__p_0360+s_xx#d_xx__h_08__p_0360+s_xx#d_xx__h_09__p_0360',    
-	NewDeli: 's_xx#d_xx__h_23__p_0360+s_xx#d_xx__h_00__p_0360+s_xx#d_xx__h_01__p_0360+s_xx#d_xx__h_02__p_0360+s_xx#d_xx__h_03__p_0360+s_xx#d_xx__h_04__p_0360+s_xx#d_xx__h_05__p_0360+s_xx#d_xx__h_06__p_0360+s_xx#d_xx__h_07__p_0360+s_xx#d_xx__h_08__p_0360+s_xx#d_xx__h_09__p_0360',
+	Drink_01: 's_xx#d_01__h_03__p_0360+s_xx#d_02__h_00__p_0360+s_xx#d_02__h_07__p_0360+s_xx#d_03__h_04__p_0360+s_xx#d_04__h_01__p_0360+s_xx#d_04__h_08__p_0360+s_xx#d_05__h_05__p_0360+s_xx#d_06__h_02__p_0360+s_xx#d_06__h_09__p_0360+s_xx#d_06__h_23__p_0360+',
+	Eat_01: 's_xx#d_01__h_03__p_0360+s_xx#d_02__h_00__p_0360+s_xx#d_02__h_07__p_0360+s_xx#d_03__h_04__p_0360+s_xx#d_04__h_01__p_0360+s_xx#d_04__h_08__p_0360+s_xx#d_05__h_05__p_0360+s_xx#d_06__h_02__p_0360+s_xx#d_06__h_09__p_0360+s_xx#d_06__h_23__p_0360+',
+    Drink_02: 's_xx#d_01__h_04__p_0360+s_xx#d_02__h_01__p_0360+s_xx#d_02__h_08__p_0360+s_xx#d_03__h_05__p_0360+s_xx#d_04__h_02__p_0360+s_xx#d_04__h_23__p_0360+s_xx#d_05__h_06__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_06__h_03__p_0360+',
+    Eat_02: 's_xx#d_01__h_04__p_0360+s_xx#d_02__h_01__p_0360+s_xx#d_02__h_08__p_0360+s_xx#d_03__h_05__p_0360+s_xx#d_04__h_02__p_0360+s_xx#d_04__h_23__p_0360+s_xx#d_05__h_06__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_06__h_03__p_0360+',
+	Drink_03: 's_xx#d_01__h_05__p_0360+s_xx#d_02__h_02__p_0360+s_xx#d_02__h_09__p_0360+s_xx#d_03__h_06__p_0360+s_xx#d_04__h_03__p_0360+s_xx#d_05__h_00__p_0360+s_xx#d_05__h_07__p_0360+s_xx#d_06__h_04__p_0360+',
+	Eat_03: 's_xx#d_01__h_05__p_0360+s_xx#d_02__h_02__p_0360+s_xx#d_02__h_09__p_0360+s_xx#d_03__h_06__p_0360+s_xx#d_04__h_03__p_0360+s_xx#d_05__h_00__p_0360+s_xx#d_05__h_07__p_0360+s_xx#d_06__h_04__p_0360+',
+	Drink_04: 's_xx#d_01__h_02__p_0360+s_xx#d_01__h_09__p_0360+s_xx#d_01__h_23__p_0360+s_xx#d_02__h_06__p_0360+s_xx#d_03__h_03__p_0360+s_xx#d_04__h_07__p_0360+s_xx#d_05__h_04__p_0360+s_xx#d_06__h_01__p_0360+s_xx#d_01__h_08__p_0360+',
+	Eat_04: 's_xx#d_01__h_02__p_0360+s_xx#d_01__h_09__p_0360+s_xx#d_01__h_23__p_0360+s_xx#d_02__h_06__p_0360+s_xx#d_03__h_03__p_0360+s_xx#d_04__h_07__p_0360+s_xx#d_05__h_04__p_0360+s_xx#d_06__h_01__p_0360+s_xx#d_01__h_08__p_0360+',
+	Drink_05: 's_xx#d_01__h_06__p_0360+s_xx#d_02__h_03__p_0360+s_xx#d_03__h_00__p_0360+s_xx#d_03__h_07__p_0360+s_xx#d_04__h_04__p_0360+s_xx#d_05__h_01__p_0360+s_xx#d_05__h_08__p_0360+s_xx#d_06__h_05__p_0360+',
+	Eat_05: 's_xx#d_01__h_06__p_0360+s_xx#d_02__h_03__p_0360+s_xx#d_03__h_00__p_0360+s_xx#d_03__h_07__p_0360+s_xx#d_04__h_04__p_0360+s_xx#d_05__h_01__p_0360+s_xx#d_05__h_08__p_0360+s_xx#d_06__h_05__p_0360+',
+	Drink_06: 's_xx#d_01__h_00__p_0360+s_xx#d_01__h_07__p_0360+s_xx#d_02__h_04__p_0360+s_xx#d_03__h_01__p_0360+s_xx#d_04__h_05__p_0360+s_xx#d_05__h_02__p_0360+s_xx#d_05__h_09__p_0360+s_xx#d_05__h_23__p_0360+s_xx#d_06__h_06__p_0360+',
+	Eat_06: 's_xx#d_01__h_00__p_0360+s_xx#d_01__h_07__p_0360+s_xx#d_02__h_04__p_0360+s_xx#d_03__h_01__p_0360+s_xx#d_04__h_05__p_0360+s_xx#d_05__h_02__p_0360+s_xx#d_05__h_09__p_0360+s_xx#d_05__h_23__p_0360+s_xx#d_06__h_06__p_0360+',
+	Drink_07: 's_xx#d_01__h_01__p_0360+s_xx#d_01__h_08__p_0360+s_xx#d_02__h_05__p_0360+s_xx#d_03__h_02__p_0360+s_xx#d_03__h_09__p_0360+#d_03__h_09__p_0360+#d_03__h_23__p_0360+s_xx#d_04__h_06__p_0360+s_xx#d_05__h_03__p_0360+s_xx#d_06__h_00__p_0360+s_xx#d_06__h_07__p_0360+'	
+	Eat_07: 's_xx#d_01__h_01__p_0360+s_xx#d_01__h_08__p_0360+s_xx#d_02__h_05__p_0360+s_xx#d_03__h_02__p_0360+s_xx#d_03__h_09__p_0360+#d_03__h_09__p_0360+#d_03__h_23__p_0360+s_xx#d_04__h_06__p_0360+s_xx#d_05__h_03__p_0360+s_xx#d_06__h_00__p_0360+s_xx#d_06__h_07__p_0360+'
+
 };
+
 //d_xx ==> xx means 01-06
 //d_0x ==> 0x means 01-05
 
@@ -242,14 +256,14 @@ function commercialInitFunction(commercial)
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Breslev");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://www.emuniyim.com/"));
             break;
-        case "ShifonPlus":
-            document.getElementById("commercial").querySelector(".day").setAttribute("id","ShifonPlus");
-            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://shifonplus.com/"));
-            break;  
         case "LechemMoshe":
 			document.getElementById("commercial").querySelector(".day").setAttribute("id","LechemMoshe");
 			//document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://lecemoshe.click-eat.co.il/"));
-            break;     			
+            break;     
+        case "ShifonPlus":
+			document.getElementById("commercial").querySelector(".day").setAttribute("id","ShifonPlus");
+			//document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"http://shifonplus.com/"));
+            break;     
         case "IDF":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","IDF");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.idf.il/"));
@@ -280,6 +294,14 @@ function commercialInitFunction(commercial)
         break; 
         case "NesCafe":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","NesCafe");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 
+        case "HebrewCommercial":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","HebrewCommercial");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break;
+		case "DJ_Gilad":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","DJ_Gilad");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 
 		case "Eat_01":
@@ -337,7 +359,7 @@ function commercialInitFunction(commercial)
 		case "Drink_07":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_07");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
-        break; 
+        break; 		
 	} 
 }
 
