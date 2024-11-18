@@ -31,6 +31,11 @@ function setmazal() {
 
     hebrewday = day;
 	hebrewday += hebrewDayOffset();
+	
+	if(hebrewday == 0)
+		hebrewday = 7;
+
+	console.log("hebrewday: " + hebrewday);
 
     var day_mida = ["חסד", "גבורה", "תפארת", "נצח", "הוד", "יסוד", "מלכות"];
     var x = 0;

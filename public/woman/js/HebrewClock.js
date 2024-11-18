@@ -1,6 +1,4 @@
-﻿var isStartPray = false;
-var curr_hour;
-var preLbMin = 0;
+﻿var isNight = false;
 function hebrewclock()
 {
 
@@ -18,11 +16,21 @@ function hebrewclock()
     var date = new Date();
 
 	var h,m,s,milisec;
-	var h = date.getHours();
-	var m = date.getMinutes();
-	var s = date.getSeconds();
-	var milisec = date.getMilliseconds();
-	curr_hour = milisec + (s*1000) + (m*60*1000) + ((h)*60*60*1000);
+	if(true)//birthHour == null)
+    {
+		var h = date.getHours();
+		var m = date.getMinutes();
+		var s = date.getSeconds();
+		var milisec = date.getMilliseconds();
+	}
+	else
+	{
+		var h = birthHour;
+		var m = birthMin;
+		var s = 0;
+		var milisec = 0;		
+	}
+	var curr_hour = milisec + (s*1000) + (m*60*1000) + ((h)*60*60*1000);
 	
 	curr_hour = curr_hour/(1000 * 3600);
 
@@ -34,14 +42,10 @@ function hebrewclock()
 	var minute;// = Math.floor(12 * 1080 * (curr_hour_offset / length)) - hour*1080;
 	var second;// = Math.floor(12 * 1080 * 76 * (curr_hour_offset / length)) - (hour * 1080 * 76) - (minute * 76);
 	
-	var isNight = true;
-							
-	//month days 23-7						
-	//case 1:
-	//moonrise at 06:57 and moonset at 17:17
-	//curr_hour between them.
+	
 	if(sunset > sunrise && curr_hour < sunset)
 	{
+		console.log("woman_1");
 		var length = sunset - sunrise;
 		var curr_hour_offset = curr_hour - sunrise;
 		
@@ -63,6 +67,7 @@ function hebrewclock()
 	//curr_hour earlier.
 	if(sunset > sunrise && curr_hour < sunrise)
 	{
+		console.log("woman_2");
 		var length = sunrise + 24-sunset_yasterday;
 		var curr_hour_offset = curr_hour + 24-sunset_yasterday;
 		
@@ -121,11 +126,16 @@ function hebrewclock()
 		
 		isNight = true;
 	}
+	
+	//console.log("woman sunset: " + sunset);
+	//console.log("woman sunrise: " + sunrise);
+	//console.log("woman curr_hour: " + curr_hour);
 	//case 2:
 	//moonrise at 13:05 and moonset at 00:00
 	//curr_hour earlier.
 	if(sunset < sunrise && curr_hour < sunset)
 	{
+		
 		var length = sunset + 24-sunrise_yasterday;
 		var curr_hour_offset = curr_hour + 24-sunrise_yasterday;
 		
@@ -164,72 +174,76 @@ function hebrewclock()
 		isNight = false;
 	}
 
-	
+
+
 	display_time();
-	setmazal();	
-	markTime(isNight);
-	
 	if(lbMinute == 0)
-    {
-		//document.getElementsByClassName("tefilaTool").display = "none";
-		//document.getElementById("tefilaTool").style.display = "none";
-		doit();
-		setmazal();	
-		commercialFunction();
+	{
+        doit();
+		setmazal();
+        setMasechet();
+        setSefer();
+        setParasha();
+        commercialFunction();
 	}
 	
-	if(preLbMin != lbMinute)
-	{		
-		//console.log(lbMinute);
-		//doit();
-        setmazal();
-		
-		commercialFunction();
-		preLbMin = lbMinute;
-	}  	
-	//else if(parseInt(document.getElementById("Hour").value) == 11)
-	//{
-		/*
-		if(Math.random()*10>5)
-			lbHour = 13;
-		else
-			lbHour = 11;
-		document.getElementById("Hour").value = lbHour;
-		lbMinute = 1080 - minute;
-		document.getElementById("Minute").value = lbMinute;
-		lbSecond = 76 - second;
-		document.getElementById("Second").value = lbSecond;
-		display_time();
-		*/
-	//	if(!isStartPray && (curr_hour > birkutHashahar)  && Math.abs(curr_hour - birkutHashahar) < 0.1)
-	//	{
-	//		Tefila();
-	//		isStartPray = true;			
-	//	}
-	//		
-	//}
-		
-	//if(lbHour == 6)
-	//	isStartPray = false;
-	
-	//Tefila();
-	//sunalert(curr_hour,lbHour,lbMinute,lbSecond);
-    //if(lbMinute == 0 || lbMinute == 360 || lbMinute == 720)
-    //    tick_sound();
 }
-
 
 //---clock timer---
-function oTimerclock() 
-{
-	oTimer = setInterval(hebrewclock, 10);
+function oTimerclock() {
+//    if (lbHour < 12)
+        oTimer = setInterval(hebrewclock, 10);
+//    else
+//        oTimer = setInterval(hebrewclock, (shaa_zmanit_day) * 60 * 60 * 1000 / (1080*76));
 }
 
+function clock() {
+    //adding one second
+    lbSecond++;
+    if (lbSecond == 76)
+    {
+        lbSecond = 0;
+        lbMinute++;
+    }
+    if (lbMinute == 1080)
+    {
+        lbMinute = 0;
+        lbHour++;
+        setmazal();
+        setMasechet();
+        setSefer();
+        setParasha();
+
+        clearInterval(oTimer);
+        oTimerclock();
+        //clearInterval(oTimer);
+        //getLocation();
+        //return;
+    }
+    else if (lbMinute > 1079)
+    {
+        lbMinute -= 1080;
+        lbHour++;
+        setmazal();
+        setMasechet();
+        setSefer();
+        setParasha();
+
+        clearInterval(oTimer);
+        oTimerclock();
+    }
+
+    if (lbHour == 24)
+        lbHour = 0;
+    else if (lbHour > 23)
+    {
+        lbHour -= 24;
+    }
+}
 
 function display_time()
 {
-	//---displaying the clock---
-	//second
+	    //---dispaying the clock---
     if (lbSecond < 10)
         document.getElementById("Second").value = "0" + lbSecond;
     else
@@ -245,46 +259,25 @@ function display_time()
     else
         document.getElementById("Minute").value = lbMinute;
 
-	//hour
+    //hour
+//    if (lbHour < 12)
+        lbHourClock = lbHour;
+//    else
+//        lbHourClock = lbHour - 12;
+	
+	//offset();
+
     if (document.getElementById("Hour").value < 10)
         document.getElementById("Hour").value = "0" + document.getElementById("Hour").value;
     else
         document.getElementById("Hour").value = document.getElementById("Hour").value;
 
-	
-	var date = new Date();
-
-	var h,m,s;
-	var h = date.getHours();
-	var m = date.getMinutes();
-	var s = date.getSeconds();
-
-	//document.getElementById("ChirstianHour").value = h<10? "0" + h : h;
-	//document.getElementById("ChirstianMinute").value = m<10? "0" + m : m ;
-	//document.getElementById("ChirstianSecond").value = s<10? "0" + s : s;	
 }
 
-function markTime(moonSleep)
+function offset()
 {
-	//console.log(moonSleep);
-	
-	if(moonSleep)
-	{
-		document.getElementById("Hour").style.color = "#878787";
-		document.getElementById("Text2").style.color = "#878787";
-		document.getElementById("Minute").style.color = "#878787";
-		document.getElementById("Text4").style.color = "#878787";
-		document.getElementById("Second").style.color = "#878787";
-	}
-	else
-	{
-		document.getElementById("Hour").style.color = "#CA2C92";
-		document.getElementById("Text2").style.color = "#CA2C92";
-		document.getElementById("Minute").style.color = "#CA2C92";
-		document.getElementById("Text4").style.color = "#CA2C92";
-		document.getElementById("Second").style.color = "#CA2C92";
-	}
-	
-	
+	if (lbHour < 22) // 0==>2, 1==>3, 2==>4, 3==>5, 4==>6, 5==>7, 6==>8, 7==>9, 8==>10, 9==>11
+       lbHourClock = lbHour + 2;
+    else // 22 ==> 0, 23==> 1, 24==>2
+       lbHourClock = lbHour + 2 - 24;		
 }
-

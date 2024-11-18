@@ -5,8 +5,9 @@ function hebrewDayOffset()
 	setmazal_man();
 
 	
-	//console.log(lbMinute);
-	//console.log(lbMinute_man);
+	console.log(lbHour);
+	console.log(lbHour_man);
+		
 	
 	
 	//Man is leading
