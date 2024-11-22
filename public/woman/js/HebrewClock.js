@@ -135,9 +135,20 @@ function hebrewclock()
 	//curr_hour earlier.
 	if(sunset < sunrise && curr_hour < sunset)
 	{
-		
+		console.log("--------???1??----");
 		var length = sunset + 24-sunrise_yasterday;
 		var curr_hour_offset = curr_hour + 24-sunrise_yasterday;
+		
+		console.log("sunset: " + sunset);
+		console.log("sunrise_yasterday: " + sunrise_yasterday);
+		console.log("curr_hour: " + curr_hour);
+		console.log("sunrise_yasterday: " + sunrise_yasterday);
+		
+		console.log(sunset);
+		console.log("------------");
+		console.log(length);
+		console.log(curr_hour_offset);
+		console.log("------------");
 		
 		hour = Math.floor(12* (curr_hour_offset/length));
 		minute = Math.floor(12 * 1080 * (curr_hour_offset / length)) - hour*1080;
@@ -157,6 +168,7 @@ function hebrewclock()
 	//curr_hour after moonset.
 	if(sunset < sunrise && curr_hour > sunrise)
 	{
+		console.log("--------??2???----");
 		var length = sunset_tommorow + 24-sunrise;
 		var curr_hour_offset = curr_hour - sunrise;
 		

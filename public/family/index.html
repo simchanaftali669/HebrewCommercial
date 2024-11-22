@@ -24,8 +24,8 @@
 <body id="youtube" onclick="showBackground();">
 	
 	<div id="iframe-container">
-		<iframe id="commercial_woman" src="../woman/index.html"> </iframe>
-		<iframe id="commercial_man" src="../man/index.html"> </iframe>
+		<iframe id="commercial_woman"> </iframe>
+		<iframe id="commercial_man"> </iframe>
 	</div>
 
     <script type="text/javascript" src="conf/commercialsData.json"></script>
@@ -123,13 +123,23 @@
 
     function showPosition(position)
     {
-        var url = new URL(document.location.href);
+		var commercial_woman = document.getElementById("commercial_woman");
+        var commercial_man = document.getElementById("commercial_man");
+		
+		var url = new URL(document.location.href);
         var lon = url.searchParams.get("longitude");        
         var lat = url.searchParams.get("latitude");        
         if(lat)
         {
-            //tz = https://maps.googleapis.com/maps/api/timezone/outputFormat?parameters
+			commercial_woman.src = "../woman/index.html?latitude=" + lat + "&longitude=" + lon;
+			commercial_man.src = "../man/index.html?latitude=" + lat + "&longitude=" + lon;
+			//tz = https://maps.googleapis.com/maps/api/timezone/outputFormat?parameters
         }
+		else
+		{
+			commercial_man.src = "../man/index.html"
+			commercial_woman.src = "../woman/index.html";
+		}
 
         longitude = lon ? lon : position.coords.longitude;
         latitude = lat ? lat : position.coords.latitude;

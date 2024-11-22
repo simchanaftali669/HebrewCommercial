@@ -67,6 +67,13 @@ function doit() {
 		hour[4] = sunset;
 		hour[5] = sunset_tommorow;
 		
+		console.log(sunrise_yasterday);
+		console.log(sunrise);
+		console.log(sunrise_tommorow);	
+		console.log(sunset_yasterday);	
+		console.log(sunset);	
+		console.log(sunset_tommorow);	
+		
         shaa_zmanit = (sunset - sunrise) / 12;
 
 
