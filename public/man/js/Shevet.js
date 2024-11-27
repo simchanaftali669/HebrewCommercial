@@ -148,10 +148,7 @@ function setShevet()
 		else if( asher_dan <= latitude && latitude < dan_benjamin)
 			i.style.backgroundImage = "url('../pic/shevet/04/10.png')";
 		else if( dan_benjamin <= latitude && latitude < benjamin_menashe)
-		{
-			console.log("enter ger");
 			i.style.backgroundImage = "url('../pic/shevet/04/09.png')";
-		}
 		else if( benjamin_menashe <= latitude && latitude < menashe_ephraim)
 			i.style.backgroundImage = "url('../pic/shevet/04/08.png')";
 		else if( menashe_ephraim <= latitude && latitude < ephraim)
