@@ -189,6 +189,7 @@ function hebrewclock()
 
 
 	display_time();
+	markWomanTime(isNight);
 	if(lbMinute == 0)
 	{
         doit();
@@ -292,4 +293,28 @@ function offset()
        lbHourClock = lbHour + 2;
     else // 22 ==> 0, 23==> 1, 24==>2
        lbHourClock = lbHour + 2 - 24;		
+}
+
+function markWomanTime(moonSleep)
+{
+	//console.log(moonSleep);
+	
+	if(moonSleep)
+	{
+		document.getElementById("Hour").style.color = "#878787";
+		document.getElementById("Text2").style.color = "#878787";
+		document.getElementById("Minute").style.color = "#878787";
+		document.getElementById("Text4").style.color = "#878787";
+		document.getElementById("Second").style.color = "#878787";
+	}
+	else
+	{
+		document.getElementById("Hour").style.color = "#CA2C92";
+		document.getElementById("Text2").style.color = "#CA2C92";
+		document.getElementById("Minute").style.color = "#CA2C92";
+		document.getElementById("Text4").style.color = "#CA2C92";
+		document.getElementById("Second").style.color = "#CA2C92";
+	}
+	
+	
 }
