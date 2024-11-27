@@ -1,4 +1,5 @@
 ﻿var isNight = false;
+var preLbMin = 0;
 function hebrewclock()
 {
 
@@ -190,15 +191,30 @@ function hebrewclock()
 
 	display_time();
 	markWomanTime(isNight);
+
 	if(lbMinute == 0)
 	{
         doit();
-		setmazal();
-        setMasechet();
-        setSefer();
-        setParasha();
-        commercialFunction();
-	}
+		//setmazal();
+        //setMasechet();
+        //setSefer();
+        //setParasha();
+		//var url = document.location.href;
+		//if(url.includes("jewish") || url.includes("cristian") || url.includes("islam"))
+		//	sederLimud();
+		//setmazal();
+        //commercialFunction();
+    }
+
+	if(preLbMin != lbMinute)
+	{		
+		//console.log(lbMinute);
+		//doit();
+        setmazal();
+		
+		commercialFunction();
+		preLbMin = lbMinute;
+	}   
 	
 }
 
