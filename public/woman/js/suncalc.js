@@ -28,7 +28,7 @@ var dayMs = 1000 * 60 * 60 * 24,
 
 function toJulian(date) 
 { 
-	console.log("date.valueOf(): " + date.valueOf());
+	////console.log("date.valueOf(): " + date.valueOf());
 	return date.valueOf() / dayMs - 0.5 + J1970; 
 }
 function fromJulian(j)  { return new Date((j + 0.5 - J1970) * dayMs); }
@@ -197,8 +197,8 @@ function moonCoords(d) { // geocentric ecliptic coordinates of the moon
     var L = rad * (218.316 + 13.176396 * d), // ecliptic longitude
         M = rad * (134.963 + 13.064993 * d); // mean anomaly
 	
-    console.log("M: " + M);	
-    console.log("cos(M): " + cos(M));
+    //console.log("M: " + M);	
+    //console.log("cos(M): " + cos(M));
 	
 	var F = rad * (93.272 + 13.229350 * d),  // mean distance
 
@@ -219,7 +219,7 @@ SunCalc.getMoonPosition = function (date, lat, lng) {
         phi = rad * lat,
         d   = toDays(date);
 
-	console.log("toDays(date): " + d );
+	//console.log("toDays(date): " + d );
 
 
     var c = moonCoords(d);
@@ -227,7 +227,7 @@ SunCalc.getMoonPosition = function (date, lat, lng) {
 	    //ra: rightAscension(l, b),
         //dec: declination(l, b),
         //dist: dt
-	console.log("c1: " + c.ra + "| c2: " + c.dec + "| c3: " + c.dist );
+	//console.log("c1: " + c.ra + "| c2: " + c.dec + "| c3: " + c.dist );
 	
     var H = siderealTime(d, lw) - c.ra,
         h = altitude(H, phi, c.dec),
@@ -278,14 +278,14 @@ function hoursLater(date, h) {
 
 SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
     var t = new Date(date);
-	//console.log(t); --> check here the bug...
+	////console.log(t); --> check here the bug...
     if (inUTC) 
 	{
 		t.setUTCHours(0, 0, 0, 0);
     }
 	else
 	{
-		console.log("inUTC eqauls false");
+		//console.log("inUTC eqauls false");
 		t.setHours(0, 0, 0, 0);
 	}
 	
@@ -294,7 +294,7 @@ SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
         h0 = SunCalc.getMoonPosition(t, lat, lng).altitude - hc,
         h1, h2, rise, set, a, b, xe, ye, d, roots, x1, x2, dx;
 
-	console.log("h0: " + h0);
+	//console.log("h0: " + h0);
 
 
     // go in 2-hour chunks, each time seeing if a 3-point quadratic curve crosses zero (which means rise or set)
@@ -302,10 +302,10 @@ SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
         h1 = SunCalc.getMoonPosition(hoursLater(t, i), lat, lng).altitude - hc;
         h2 = SunCalc.getMoonPosition(hoursLater(t, i + 1), lat, lng).altitude - hc;
 
-		console.log("----------");
-		console.log("h1: " + h1);
-		console.log("h2: " + h2);
-		console.log("----------");
+		//console.log("----------");
+		//console.log("h1: " + h1);
+		//console.log("h2: " + h2);
+		//console.log("----------");
 		
         a = (h0 + h2) / 2 - h1;
         b = (h2 - h0) / 2;
@@ -349,7 +349,7 @@ SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
 
 function convertDateTimeToFloat(date)
 {
-	//console.log(date);
+	////console.log(date);
 	var h = date.getHours();
     var m = date.getMinutes();
     var s = date.getSeconds();
