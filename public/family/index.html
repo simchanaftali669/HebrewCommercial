@@ -28,23 +28,6 @@
 		<iframe id="commercial_man" src="../man/index.html"> </iframe>
 	</div>
 
-    <script type="text/javascript" src="conf/commercialsData.json"></script>
-    <script type="text/javascript" src="js/Geolocation.js"></script>
-    <script type="text/javascript" src="js/Menu.js"></script>
-    <script type="text/javascript" src="js/HebrewClock.js"></script>
-    <script type="text/javascript" src="js/Gender.js"></script>
-    <script type="text/javascript" src="js/Religion.js"></script>
-    <script type="text/javascript" src="js/Commercial.js"></script>
-    <script type="text/javascript" src="js/Mazal.js"></script>
-    <script type="text/javascript" src="js/Times.js"></script>
-    <script type="text/javascript" src="js/Shevet.js"></script>
-    <script type="text/javascript" src="js/SunTime.js"></script>
-    <script type="text/javascript" src="js/TimeAdj.js"></script>
-    <script type="text/javascript" src="js/Dst.js"></script>
-    <script type="text/javascript" src="js/Dates.js"></script>
-    <script type="text/javascript" src="js/Location.js"></script>
-
-
 	
 <script type="text/javascript">
 
@@ -100,63 +83,6 @@
     else
         gender = genders.MARRIED;
 
-
-    getLocation();  //activate the clock
-
-
-
-    //---get Location and activate the clock---
-    function getLocation()
-    {
-		var url = new URL(document.location.href);
-		if(url.searchParams.get("longitude") != null)
-		{
-			showPosition(null);
-			return;
-		}
-		
-        if (navigator.geolocation)
-        {
-            navigator.geolocation.getCurrentPosition(showPosition,showError);
-        }
-    }
-
-    function showPosition(position)
-    {
-		var commercial_woman = document.getElementById("commercial_woman");
-        var commercial_man = document.getElementById("commercial_man");
-		
-		var url = new URL(document.location.href);
-        var lon = url.searchParams.get("longitude");        
-        var lat = url.searchParams.get("latitude");        
-        if(lat)
-        {
-			commercial_woman.src = "../woman/index.html?latitude=" + lat + "&longitude=" + lon;
-			commercial_man.src = "../man/index.html?latitude=" + lat + "&longitude=" + lon;
-			//tz = https://maps.googleapis.com/maps/api/timezone/outputFormat?parameters
-        }
-		else
-		{
-			commercial_man.src = "../man/index.html"
-			commercial_woman.src = "../woman/index.html";
-		}
-
-        longitude = lon ? lon : position.coords.longitude;
-        latitude = lat ? lat : position.coords.latitude;
-
-        set_dst();
-        set_default_date();
-        list_pos();
-        hebrewclock();
-        oTimerclock();
-        
-        //genderInitFunction();
-        setmazal();
-		
-        //נחלה
-        setShevet();
-        commercialFunction();
-    }
 
     //link to mazal information
     function openInNewTab() {
