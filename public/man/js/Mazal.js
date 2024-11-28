@@ -107,7 +107,7 @@ function setmazal() {
 
     set_mazal_url();
 
-    music_offset();
+    //music_offset();
 }
 
 function music_offset()

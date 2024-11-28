@@ -5,8 +5,8 @@ function hebrewDayOffset()
 	setmazal_man();
 
 	
-	console.log(lbHour);
-	console.log(lbHour_man);
+	//console.log(lbHour);
+	//console.log(lbHour_man);
 		
 	
 	

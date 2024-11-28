@@ -24,15 +24,15 @@ function hebrewclock_man()
 	
 	curr_hour_man = curr_hour_man/(1000 * 3600);
 
-	console.log("sunset_man:" + " " + sunset_man);
-	console.log("sunrise_man:" + " " + sunrise_man);
-	console.log("curr_hour_man:" + " " + curr_hour_man);
+	//console.log("sunset_man:" + " " + sunset_man);
+	//console.log("sunrise_man:" + " " + sunrise_man);
+	//console.log("curr_hour_man:" + " " + curr_hour_man);
 	
 	
 
 	if(sunset_man > sunrise_man && curr_hour_man < sunset_man)
 	{
-		console.log("1");
+		//console.log("1");
 		let length = sunset_man - sunrise_man;
 		let curr_hour_offset = curr_hour_man - sunrise_man;
 		
@@ -52,7 +52,7 @@ function hebrewclock_man()
 	//curr_hour earlier.
 	else if(sunset_man > sunrise_man && curr_hour_man < sunrise_man)
 	{
-		console.log("2");
+		//console.log("2");
 		let length = sunrise_man + 24-sunset_yasterday_man;
 		let curr_hour_offset = curr_hour_man + 24-sunset_yasterday;
 		
@@ -69,7 +69,7 @@ function hebrewclock_man()
 	//curr_hour after moonset.
 	if(sunset_man > sunrise_man && curr_hour_man > sunset_man)
 	{
-		console.log("3");
+		//console.log("3");
 		let length = sunrise_tommorow_man + 24-sunset_man;
 		let curr_hour_offset = curr_hour_man - sunset_man;
 		
@@ -133,7 +133,7 @@ function hebrewclock_man()
 
 	//if(preLbMin != lbMinute)
 	//{		
-		//console.log(lbMinute);
+		////console.log(lbMinute);
 		//doit();
      //   setmazal();
 		
@@ -243,9 +243,9 @@ function offset()
 
 function markTime()
 {	
-	//console.log("curr_hour: " + curr_hour);
-	//console.log("sunset: " + sunset);
-	//console.log("misheyakir: " + misheyakir);
+	////console.log("curr_hour: " + curr_hour);
+	////console.log("sunset: " + sunset);
+	////console.log("misheyakir: " + misheyakir);
 	
 	if(curr_hour > tzeit  || 
 	   curr_hour < misheyakir)
