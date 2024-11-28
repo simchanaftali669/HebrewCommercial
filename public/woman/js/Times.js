@@ -39,6 +39,7 @@ function doit() {
 	time_yasterday[3] = convertDateTimeToFloat(SunCalc.getMoonTimes(yasterday, latitude, longitude).set);	
     //time_yasterday = suntime(yasterday.getDate(), yasterday.getMonth() +1, yasterday.getYear(), 90, 50, lngd, lngm, ewi, latd, latm, nsi, adj);
 
+
     //the time of the current day
     var time_today = [0, 0, 0, 0];
     //time_today = suntime(today.getDate(), today.getMonth() +1, today.getYear(), 90, 50, lngd, lngm, ewi, latd, latm, nsi, adj);

@@ -342,6 +342,9 @@ SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
     if (rise) result.rise = hoursLater(t, rise);
     if (set) result.set = hoursLater(t, set);
 
+	console.log("result.rise: " + result.rise );
+	
+
     if (!rise && !set) result[ye > 0 ? 'alwaysUp' : 'alwaysDown'] = true;
 
     return result;
@@ -356,6 +359,9 @@ function convertDateTimeToFloat(date)
 	var milisec = date.getMilliseconds();
 	var floatDate = milisec + (s*1000) + (m*60*1000) + ((h)*60*60*1000);	
 	floatDate = floatDate/(1000 * 3600);
-
+	
+	if(floatDate >= 24)
+		floatDate -= 24;
+	
 	return floatDate;
 }
