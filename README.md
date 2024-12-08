@@ -8,7 +8,6 @@
 
 3. Single Woman:
 
-Single eoman:
 - https://hebrewcommercial.web.app/woman/index.html?latitude=39&longitude=25
 
 - please replce 39 and 15 with the desire location, if it show Jerusalem on the top it may be outside of Israel promise land.
