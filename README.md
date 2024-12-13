@@ -1,6 +1,5 @@
 # UseCase
-https://hebrewcommercial.web.app/family (in the meanwhile working only at Israel Country, outside called Jerusalem, to be continue...)
-
+https://hebrewcommercial.web.app/family
 # HebrewCommercial13
 
 ## About the Project
