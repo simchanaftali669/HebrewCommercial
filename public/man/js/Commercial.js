@@ -4,25 +4,31 @@
 var cInRegionAtTime = new Map();
 const commercials = 
 {
-    Soteria: 's_xx#d_xx__h_xx__p_0001+',
-    Breslev: 's_xx#d_xx__h_xx__p_0001+',
+    Soteria: 's_xx#d_xx__h_xx__p_0001+s_xx#d_07__h_10__p_0001+s_xx#d_07__h_11__p_0001',
+    Breslev: 's_xx#d_xx__h_xx__p_0001+s_xx#d_07__h_10__p_0001+s_xx#d_07__h_11__p_0001',
  
-    Drink_01: 's_xx#d_02__h_14__p_0360+s_xx#d_04__h_15__p_0360+s_xx#d_05__h_12__p_0360+s_xx#d_06__h_16__p_0360+s_xx#d_07__h_13__p_0360+s_xx#d_01__h_03__p_0360+s_xx#d_02__h_00__p_0360+s_xx#d_02__h_07__p_0360+s_xx#d_03__h_04__p_0360+s_xx#d_04__h_01__p_0360+s_xx#d_04__h_08__p_0360+s_xx#d_05__h_05__p_0360+s_xx#d_06__h_02__p_0360+s_xx#d_06__h_09__p_0360+s_xx#d_06__h_23__p_0360+',
-	Drink_02: 's_xx#d_02__h_15__p_0360+s_xx#d_03__h_12__p_0360+s_xx#d_04__h_16__p_0360+s_xx#d_05__h_13__p_0360+s_xx#d_07__h_14__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_02__h_01__p_0360+s_xx#d_02__h_08__p_0360+s_xx#d_03__h_05__p_0360+s_xx#d_04__h_02__p_0360+s_xx#d_04__h_23__p_0360+s_xx#d_05__h_06__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_06__h_03__p_0360+',   
-	Drink_03: 's_xx#d_01__h_12__p_0360+s_xx#d_02__h_16__p_0360+s_xx#d_03__h_13__p_0360+s_xx#d_05__h_14__p_0360+s_xx#d_07__h_15__p_0360+s_xx#d_01__h_05__p_0360+s_xx#d_02__h_02__p_0360+s_xx#d_02__h_09__p_0360+s_xx#d_03__h_06__p_0360+s_xx#d_04__h_03__p_0360+s_xx#d_05__h_00__p_0360+s_xx#d_05__h_07__p_0360+s_xx#d_06__h_04__p_0360+',
-    Drink_04: 's_xx#d_01__h_16__p_0360+s_xx#d_02__h_13__p_0360+s_xx#d_04__h_14__p_0360+s_xx#d_06__h_01__p_0360+s_xx#d_06__h_08__p_0360+s_xx#d_06__h_15__p_0360+s_xx#d_01__h_02__p_0360+s_xx#d_01__h_09__p_0360+s_xx#d_01__h_23__p_0360+s_xx#d_02__h_06__p_0360+s_xx#d_03__h_03__p_0360+s_xx#d_04__h_07__p_0360+s_xx#d_05__h_04__p_0360+s_xx#d_06__h_01__p_0360+s_xx#d_01__h_08__p_0360+',
-	Drink_05: 's_xx#d_01__h_13__p_0360+s_xx#d_03__h_14__p_0360+s_xx#d_05__h_15__p_0360+s_xx#d_06__h_12__p_0360+s_xx#d_07__h_16__p_0360+s_xx#d_01__h_06__p_0360+s_xx#d_02__h_03__p_0360+s_xx#d_03__h_00__p_0360+s_xx#d_03__h_07__p_0360+s_xx#d_04__h_04__p_0360+s_xx#d_05__h_01__p_0360+s_xx#d_05__h_08__p_0360+s_xx#d_06__h_05__p_0360+',
-	Drink_06: 's_xx#d_01__h_14__p_0360+s_xx#d_03__h_15__p_0360+s_xx#d_04__h_12__p_0360+s_xx#d_05__h_16__p_0360+s_xx#d_06__h_13__p_0360+s_xx#d_01__h_00__p_0360+s_xx#d_01__h_07__p_0360+s_xx#d_02__h_04__p_0360+s_xx#d_03__h_01__p_0360+s_xx#d_04__h_05__p_0360+s_xx#d_05__h_02__p_0360+s_xx#d_05__h_09__p_0360+s_xx#d_05__h_23__p_0360+s_xx#d_06__h_06__p_0360+',
-	Drink_07: 's_xx#d_01__h_15__p_0360+s_xx#d_02__h_12__p_0360+s_xx#d_03__h_16__p_0360+s_xx#d_04__h_13__p_0360+s_xx#d_06__h_14__p_0360+s_xx#d_01__h_01__p_0360+s_xx#d_01__h_08__p_0360+s_xx#d_02__h_05__p_0360+s_xx#d_03__h_02__p_0360+s_xx#d_03__h_09__p_0360+#d_03__h_09__p_0360+#d_03__h_23__p_0360+s_xx#d_04__h_06__p_0360+s_xx#d_05__h_03__p_0360+s_xx#d_06__h_00__p_0360+s_xx#d_06__h_07__p_0360+s_xx#d_xx__h_18__p_0360+s_xx#d_xx__h_19__p_0360+s_xx#d_xx__h_20__p_0360+s_xx#d_xx__h_21__p_0360+s_xx#d_xx__h_22__p_0360+s_xx#d_06__h_18__p_0360+s_xx#d_06__h_19__p_0360+s_xx#d_06__h_20__p_0360+s_xx#d_06__h_21__p_0360+s_xx#d_06__h_22__p_0360+',	
+    Drink_01: 's_xx#d_02__h_14__p_0360+s_xx#d_04__h_15__p_0360+s_xx#d_05__h_12__p_0360+s_xx#d_06__h_16__p_0360+s_xx#d_07__h_13__p_0360+s_xx#d_01__h_03__p_0360+s_xx#d_02__h_00__p_0360+s_xx#d_02__h_07__p_0360+s_xx#d_03__h_04__p_0360+s_xx#d_04__h_01__p_0360+s_xx#d_04__h_08__p_0360+s_xx#d_05__h_05__p_0360+s_xx#d_06__h_02__p_0360+s_xx#d_06__h_09__p_0360+s_xx#d_06__h_23__p_0360+s_xx#d_07__h_06__p_0360+s_xx#d_07__h_13__p_0360+s_xx#d_07__h_20__p_0360+',
+	Drink_02: 's_xx#d_02__h_15__p_0360+s_xx#d_03__h_12__p_0360+s_xx#d_04__h_16__p_0360+s_xx#d_04__h_09__p_0360+s_xx#d_05__h_13__p_0360+s_xx#d_07__h_14__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_02__h_01__p_0360+s_xx#d_02__h_08__p_0360+s_xx#d_03__h_05__p_0360+s_xx#d_04__h_02__p_0360+s_xx#d_04__h_23__p_0360+s_xx#d_05__h_06__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_06__h_03__p_0360+s_xx#d_07__h_00__p_0360+s_xx#d_07__h_07__p_0360+s_xx#d_07__h_14__p_0360+s_xx#d_07__h_21__p_0360+',   
+	Drink_03: 's_xx#d_01__h_12__p_0360+s_xx#d_02__h_16__p_0360+s_xx#d_03__h_13__p_0360+s_xx#d_05__h_14__p_0360+s_xx#d_07__h_15__p_0360+s_xx#d_01__h_05__p_0360+s_xx#d_02__h_02__p_0360+s_xx#d_02__h_09__p_0360+s_xx#d_03__h_06__p_0360+s_xx#d_04__h_03__p_0360+s_xx#d_05__h_00__p_0360+s_xx#d_05__h_07__p_0360+s_xx#d_06__h_04__p_0360+s_xx#d_07__h_01__p_0360+s_xx#d_07__h_08__p_0360+s_xx#d_07__h_15__p_0360+s_xx#d_07__h_21__p_0360+',
+    Drink_04: 's_xx#d_01__h_16__p_0360+s_xx#d_02__h_13__p_0360+s_xx#d_04__h_14__p_0360+s_xx#d_06__h_01__p_0360+s_xx#d_06__h_08__p_0360+s_xx#d_06__h_15__p_0360+s_xx#d_01__h_02__p_0360+s_xx#d_01__h_09__p_0360+s_xx#d_01__h_23__p_0360+s_xx#d_02__h_06__p_0360+s_xx#d_03__h_03__p_0360+s_xx#d_04__h_07__p_0360+s_xx#d_05__h_04__p_0360+s_xx#d_06__h_01__p_0360+s_xx#d_01__h_08__p_0360+s_xx#d_07__h_05__p_0360+s_xx#d_07__h_12__p_0360+s_xx#d_07__h_19__p_0360+',
+	Drink_05: 's_xx#d_01__h_13__p_0360+s_xx#d_03__h_14__p_0360+s_xx#d_05__h_15__p_0360+s_xx#d_06__h_12__p_0360+s_xx#d_07__h_16__p_0360+s_xx#d_01__h_06__p_0360+s_xx#d_02__h_03__p_0360+s_xx#d_03__h_00__p_0360+s_xx#d_03__h_07__p_0360+s_xx#d_04__h_04__p_0360+s_xx#d_05__h_01__p_0360+s_xx#d_05__h_08__p_0360+s_xx#d_06__h_05__p_0360+s_xx#d_07__h_02__p_0360+s_xx#d_07__h_09__p_0360+s_xx#d_07__h_16__p_0360+s_xx#d_07__h_23__p_0360+',
+	Drink_06: 's_xx#d_01__h_14__p_0360+s_xx#d_03__h_15__p_0360+s_xx#d_04__h_12__p_0360+s_xx#d_05__h_16__p_0360+s_xx#d_06__h_13__p_0360+s_xx#d_01__h_00__p_0360+s_xx#d_01__h_07__p_0360+s_xx#d_02__h_04__p_0360+s_xx#d_03__h_01__p_0360+s_xx#d_04__h_05__p_0360+s_xx#d_05__h_02__p_0360+s_xx#d_05__h_09__p_0360+s_xx#d_05__h_23__p_0360+s_xx#d_06__h_06__p_0360+s_xx#d_07__h_03__p_0360+',
+	Drink_07: 's_xx#d_01__h_15__p_0360+s_xx#d_02__h_12__p_0360+s_xx#d_03__h_16__p_0360+s_xx#d_04__h_13__p_0360+s_xx#d_06__h_14__p_0360+s_xx#d_01__h_01__p_0360+s_xx#d_01__h_08__p_0360+s_xx#d_02__h_05__p_0360+s_xx#d_03__h_02__p_0360+s_xx#d_03__h_09__p_0360+#d_03__h_09__p_0360+#d_03__h_23__p_0360+s_xx#d_04__h_06__p_0360+s_xx#d_05__h_03__p_0360+s_xx#d_06__h_00__p_0360+s_xx#d_06__h_07__p_0360+s_xx#d_xx__h_18__p_0360+s_xx#d_xx__h_19__p_0360+s_xx#d_xx__h_20__p_0360+s_xx#d_xx__h_21__p_0360+s_xx#d_xx__h_22__p_0360+s_xx#d_06__h_18__p_0360+s_xx#d_06__h_19__p_0360+s_xx#d_06__h_20__p_0360+s_xx#d_06__h_21__p_0360+s_xx#d_06__h_22__p_0360+s_xx#d_07__h_04__p_0360+s_xx#d_07__h_18__p_0360+',	
 		
-	Eat_01: 's_xx#d_01__h_17__p_0360+s_xx#d_01__h_03__p_0360+s_xx#d_02__h_00__p_0360+s_xx#d_02__h_07__p_0360+s_xx#d_03__h_04__p_0360+s_xx#d_04__h_01__p_0360+s_xx#d_04__h_08__p_0360+s_xx#d_05__h_05__p_0360+s_xx#d_06__h_02__p_0360+s_xx#d_06__h_09__p_0360+s_xx#d_06__h_23__p_0360+',
-	Eat_02: 's_xx#d_06__h_17__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_02__h_01__p_0360+s_xx#d_02__h_08__p_0360+s_xx#d_03__h_05__p_0360+s_xx#d_04__h_02__p_0360+s_xx#d_04__h_23__p_0360+s_xx#d_05__h_06__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_06__h_03__p_0360+',
-	Eat_03: 's_xx#d_04__h_17__p_0360+s_xx#d_01__h_05__p_0360+s_xx#d_02__h_02__p_0360+s_xx#d_02__h_09__p_0360+s_xx#d_03__h_06__p_0360+s_xx#d_04__h_03__p_0360+s_xx#d_05__h_00__p_0360+s_xx#d_05__h_07__p_0360+s_xx#d_06__h_04__p_0360+',
-	Eat_04: 's_xx#d_03__h_17__p_0360+s_xx#d_01__h_02__p_0360+s_xx#d_01__h_09__p_0360+s_xx#d_01__h_23__p_0360+s_xx#d_02__h_06__p_0360+s_xx#d_03__h_03__p_0360+s_xx#d_04__h_07__p_0360+s_xx#d_05__h_04__p_0360+s_xx#d_06__h_01__p_0360+s_xx#d_06__h_08__p_0360+',
-	Eat_05: 's_xx#d_02__h_17__p_0360+s_xx#d_01__h_06__p_0360+s_xx#d_02__h_03__p_0360+s_xx#d_03__h_00__p_0360+s_xx#d_03__h_07__p_0360+s_xx#d_04__h_04__p_0360+s_xx#d_05__h_01__p_0360+s_xx#d_05__h_08__p_0360+s_xx#d_06__h_05__p_0360+',
-	Eat_06: 's_xx#d_07__h_17__p_0360+s_xx#d_01__h_00__p_0360+s_xx#d_01__h_07__p_0360+s_xx#d_02__h_04__p_0360+s_xx#d_03__h_01__p_0360+s_xx#d_04__h_05__p_0360+s_xx#d_05__h_02__p_0360+s_xx#d_05__h_09__p_0360+s_xx#d_05__h_23__p_0360+s_xx#d_06__h_06__p_0360+',
-	Eat_07: 's_xx#d_05__h_17__p_0360+s_xx#d_01__h_01__p_0360+s_xx#d_01__h_08__p_0360+s_xx#d_02__h_05__p_0360+s_xx#d_03__h_02__p_0360+s_xx#d_03__h_09__p_0360+#d_03__h_09__p_0360+#d_03__h_23__p_0360+s_xx#d_04__h_06__p_0360+s_xx#d_05__h_03__p_0360+s_xx#d_06__h_00__p_0360+s_xx#d_06__h_07__p_0360+'
+	Eat_01: 's_xx#d_01__h_17__p_0360+s_xx#d_01__h_03__p_0360+s_xx#d_02__h_00__p_0360+s_xx#d_02__h_07__p_0360+s_xx#d_03__h_04__p_0360+s_xx#d_04__h_01__p_0360+s_xx#d_04__h_08__p_0360+s_xx#d_05__h_05__p_0360+s_xx#d_06__h_02__p_0360+s_xx#d_06__h_09__p_0360+s_xx#d_06__h_23__p_0360+s_xx#d_07__h_06__p_0360+s_xx#d_07__h_20__p_0360+',
+	Eat_02: 's_xx#d_06__h_17__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_02__h_01__p_0360+s_xx#d_02__h_08__p_0360+s_xx#d_03__h_05__p_0360+s_xx#d_04__h_02__p_0360+s_xx#d_04__h_23__p_0360+s_xx#d_05__h_06__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_06__h_03__p_0360+s_xx#d_07__h_00__p_0360+s_xx#d_07__h_07__p_0360+s_xx#d_07__h_21__p_0360+',
+	Eat_03: 's_xx#d_04__h_17__p_0360+s_xx#d_01__h_05__p_0360+s_xx#d_02__h_02__p_0360+s_xx#d_02__h_09__p_0360+s_xx#d_03__h_06__p_0360+s_xx#d_04__h_03__p_0360+s_xx#d_05__h_00__p_0360+s_xx#d_05__h_07__p_0360+s_xx#d_06__h_04__p_0360+s_xx#d_07__h_01__p_0360+s_xx#d_07__h_08__p_0360+s_xx#d_07__h_21__p_0360+',
+	Eat_04: 's_xx#d_03__h_17__p_0360+s_xx#d_01__h_02__p_0360+s_xx#d_01__h_09__p_0360+s_xx#d_01__h_23__p_0360+s_xx#d_02__h_06__p_0360+s_xx#d_03__h_03__p_0360+s_xx#d_04__h_07__p_0360+s_xx#d_05__h_04__p_0360+s_xx#d_06__h_01__p_0360+s_xx#d_06__h_08__p_0360+s_xx#d_07__h_05__p_0360+s_xx#d_07__h_19__p_0360+',
+	Eat_05: 's_xx#d_02__h_17__p_0360+s_xx#d_01__h_06__p_0360+s_xx#d_02__h_03__p_0360+s_xx#d_03__h_00__p_0360+s_xx#d_03__h_07__p_0360+s_xx#d_04__h_04__p_0360+s_xx#d_05__h_01__p_0360+s_xx#d_05__h_08__p_0360+s_xx#d_06__h_05__p_0360+s_xx#d_07__h_02__p_0360+s_xx#d_07__h_09__p_0360+s_xx#d_07__h_23__p_0360+',
+	Eat_06: 's_xx#d_07__h_17__p_0360+s_xx#d_01__h_00__p_0360+s_xx#d_01__h_07__p_0360+s_xx#d_02__h_04__p_0360+s_xx#d_03__h_01__p_0360+s_xx#d_04__h_05__p_0360+s_xx#d_05__h_02__p_0360+s_xx#d_05__h_09__p_0360+s_xx#d_05__h_23__p_0360+s_xx#d_06__h_06__p_0360+s_xx#d_07__h_03__p_0360+s_xx#d_07__h_17__p_0360+',
+	Eat_07: 's_xx#d_05__h_17__p_0360+s_xx#d_01__h_01__p_0360+s_xx#d_01__h_08__p_0360+s_xx#d_02__h_05__p_0360+s_xx#d_03__h_02__p_0360+s_xx#d_03__h_09__p_0360+#d_03__h_09__p_0360+#d_03__h_23__p_0360+s_xx#d_04__h_06__p_0360+s_xx#d_05__h_03__p_0360+s_xx#d_06__h_00__p_0360+s_xx#d_06__h_07__p_0360+s_xx#d_07__h_04__p_0360+s_xx#d_07__h_18__p_0360+',
+
+	Meet_02: 's_xx#d_01__h_04__p_0360+s_xx#d_02__h_01__p_0360+s_xx#d_02__h_08__p_0360+s_xx#d_03__h_05__p_0360+s_xx#d_04__h_02__p_0360+s_xx#d_04__h_23__p_0360+s_xx#d_05__h_06__p_0360+s_xx#d_01__h_04__p_0360+s_xx#d_06__h_03__p_0360+s_xx#d_07__h_00__p_0360+s_xx#d_07__h_07__p_0360+s_xx#d_07__h_21__p_0360+',
+	Meet_04: 's_xx#d_01__h_02__p_0360+s_xx#d_01__h_09__p_0360+s_xx#d_01__h_23__p_0360+s_xx#d_02__h_06__p_0360+s_xx#d_03__h_03__p_0360+s_xx#d_04__h_07__p_0360+s_xx#d_05__h_04__p_0360+s_xx#d_06__h_01__p_0360+s_xx#d_06__h_08__p_0360+s_xx#d_07__h_05__p_0360+s_xx#d_07__h_19__p_0360+',
+	Meet_05: 's_xx#d_01__h_06__p_0360+s_xx#d_02__h_03__p_0360+s_xx#d_03__h_00__p_0360+s_xx#d_03__h_07__p_0360+s_xx#d_04__h_04__p_0360+s_xx#d_05__h_01__p_0360+s_xx#d_05__h_08__p_0360+s_xx#d_06__h_05__p_0360+s_xx#d_07__h_02__p_0360+s_xx#d_07__h_09__p_0360+s_xx#d_07__h_23__p_0360+',
+	Meet_07: 's_xx#d_01__h_01__p_0360+s_xx#d_01__h_08__p_0360+s_xx#d_02__h_05__p_0360+s_xx#d_03__h_02__p_0360+s_xx#d_03__h_09__p_0360+#d_03__h_09__p_0360+#d_03__h_23__p_0360+s_xx#d_04__h_06__p_0360+s_xx#d_05__h_03__p_0360+s_xx#d_06__h_00__p_0360+s_xx#d_06__h_07__p_0360+s_xx#d_07__h_04__p_0360+s_xx#d_07__h_18__p_0360+'
 };
+
 
 //d_xx ==> xx means 01-06
 //d_0x ==> 0x means 01-05
@@ -293,6 +299,10 @@ function commercialInitFunction(commercial)
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_01");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 		
+		case "Meet_01":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Meet_01");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 	
 		case "Drink_01":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_01");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
@@ -301,6 +311,10 @@ function commercialInitFunction(commercial)
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_02");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 		
+		case "Meet_02":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Meet_02");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 	
 		case "Drink_02":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_02");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
@@ -309,6 +323,10 @@ function commercialInitFunction(commercial)
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_03");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 		
+		case "Meet_03":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Meet_03");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break; 	
 		case "Drink_03":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_03");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
@@ -316,7 +334,11 @@ function commercialInitFunction(commercial)
 		case "Eat_04":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_04");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
-        break; 		
+        break; 	
+		case "Meet_04":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Meet_04");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break;		
 		case "Drink_04":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_04");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
@@ -325,6 +347,10 @@ function commercialInitFunction(commercial)
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_05");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 		
+		case "Meet_05":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Meet_05");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break;
 		case "Drink_05":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_05");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
@@ -333,6 +359,10 @@ function commercialInitFunction(commercial)
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_06");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 		
+		case "Meet_06":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Meet_06");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break;
 		case "Drink_06":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_06");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
@@ -341,6 +371,10 @@ function commercialInitFunction(commercial)
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Eat_07");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
         break; 		
+		case "Meet_04":
+            document.getElementById("commercial").querySelector(".day").setAttribute("id","Meet_07");
+            //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
+        break;
 		case "Drink_07":
             document.getElementById("commercial").querySelector(".day").setAttribute("id","Drink_07");
             //document.getElementById("commercial").addEventListener("click",openCommercialInNewTab.bind(this,"https://www.nescafe.com/"));
